@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Our Story</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="closed">
+<div id="glow"></div>
+<div id="candle"><i></i></div>
+<header>
+    <b id="ttl"></b>
+    <div class="tools">
+        <span id="sec"></span>
+        <select id="toc" aria-label="Jump to page"></select>
+        <button id="dn" title="Day / night">Day / Night</button>
+        <select id="wx" aria-label="Weather">
+            <option value="none">Clear</option><option value="rain">Rain</option><option value="storm">Storm</option>
+            <option value="snow">Snow</option><option value="fireflies">Fireflies</option><option value="leaves">Leaves</option>
+        </select>
+    </div>
+</header>
+<div id="stage" class="closed">
+    <main id="book">
+        <div class="half l"><div class="slot" id="slotL"></div></div>
+        <div class="half r"><div class="slot" id="slotR"></div><i class="ribbon"></i></div>
+        <i class="curl l" id="curlL" title="Drag to turn back"></i>
+        <i class="curl r" id="curlR" title="Drag to turn the page"></i>
+    </main>
+</div>
+<p id="hint"></p>
+<nav>
+    <button id="pv" aria-label="Previous page">&lsaquo;</button>
+    <div id="deck">
+        <i class="reel"></i><span id="tname"></span><i class="reel"></i>
+        <button id="pp" aria-label="Play or pause the song">Play</button>
+        <label>Music <input id="vol" type="range" min="0" max="1" step=".05" value=".6"></label>
+        <label>Book <input id="bvol" type="range" min="0" max="1" step=".05" value=".6"></label>
+    </div>
+    <button id="nx" aria-label="Next page">&rsaquo;</button>
+</nav>
+<div id="toast" role="status"></div>
+<div id="lock" hidden>
+    <div class="box" id="lbox">
+        <div class="seal" id="seal"><b class="a">&hearts;</b><b class="b">&hearts;</b></div>
+        <h3>This chapter is sealed</h3>
+        <input id="pw" type="text" placeholder="Passcode" autocomplete="off">
+        <div><button id="lgo">Break the seal</button> <button id="lhint">Hint</button> <button id="lx">Close</button></div>
+        <p id="lm"></p>
+    </div>
+</div>
+<audio id="tape"></audio>
+<script src="js/config.js"></script>
+<script src="js/pages.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/app.js"></script>
+<script src="js/bg.js"></script>
+</body>
+</html>
